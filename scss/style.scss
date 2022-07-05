@@ -1,0 +1,193 @@
+@import "utilities/variables";
+@import "utilities/mixing";
+@import "utilities/extend";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;  
+}
+
+body{
+    @include bodyBasics;
+   .menuPrincipal{
+        border: 2px solid ;
+        border-radius: 10px;
+        padding: 10px;
+        display: grid;
+        border-color: $color-estandar;
+        background-color: $color-fondos;
+        width: 80%;
+        margin-left: 10%;
+        h1{
+            justify-content: center;
+            text-align: center;
+            letter-spacing: 0.5rem;
+            font-size: 3rem;
+            color: $color-estandar;
+        }
+        nav ul li{
+            list-style: none;
+            font-size: 1.8rem;
+        }
+        nav ul{
+            margin-top: 10px;
+            text-decoration: none;
+            display: flex;
+            justify-content: space-evenly;
+
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: $color-estandar;
+        }
+    }
+
+ //   .linkMenu:hover {
+ //    background-color: white;
+ //    font-size: 2rem;
+ //       color: black;
+ //   }
+
+    main{
+        width: 80%;
+        margin-left: 10%;
+        background-color: $color-fondos2;
+        .fechas{
+            @extend %fechas;
+            #proximas{
+             grid-area:"proximas";
+            }
+            #pasadas{
+                grid-area:"pasadas";
+            }
+            h2{
+                color: $color-titulos;
+                margin-bottom: 2rem;
+                font-size: 2rem;
+            }
+            ul{
+                list-style: none;
+                padding: 1px;
+                color: $color-estandar;
+            }
+
+            ul li{
+                padding: 0.4rem;
+                font-size: $tamano-estandar; 
+            }
+    }
+        .imagenesIndex{
+            margin-top: 3px;
+            margin-left: 8%;
+            margin-right: 8%;
+
+    }
+       .caruselIndex{
+            width: 10%;
+            height: 10%;
+            justify-content: center;
+            margin: 25rem;
+            height: 10%;
+    }
+
+}
+}
+
+.musica{
+    display: grid;
+    grid-template: row;
+    justify-content: center;
+    justify-items: center;
+    margin: 10px;
+    
+
+    .musica1{
+        display: grid;
+        grid-template: column;
+        justify-content: center;
+        grid-template-areas: "ImagenBach descripcionBach";
+        color: $color-estandar;
+       
+        div{
+            text-align: center;
+            justify-items: center;
+            padding: 10%;
+            color: $color-estandar;
+        }
+    }
+
+    .musica2{
+        margin-top: 20px;
+        padding: 4px;
+        display: grid;
+        grid-template: row;
+        text-align: center;
+        justify-content: center;
+
+    }
+
+    h2{
+        color: $color-estandar;
+    }
+}
+
+footer{
+    background-color: black;
+    height: 200px;
+    h3{
+        color: white;
+        text-align: center;
+        font-size: $tamano-estandar;
+    }
+
+}
+
+.quienSoy{
+    padding-top:10px;
+    text-align: center;
+    h1{
+        padding: 20px 10px 10px 10px;
+        color: $color-titulos;
+        font-size: 50px;
+        text-decoration: underline;
+    }
+    p{
+        color: $color-estandar;
+        justify-content: center;
+        padding: 50px;
+        font-size: 25px;
+    }
+}
+
+
+.contacto{
+    background-color: $color-fondos2;
+    height: 600px;
+    margin-left: 10%;
+    h2{
+        color: $color-estandar;
+        font-size: 1.5rem;
+        text-align: center;
+        font-style: italic;
+    }
+    form{
+        background-color: wheat;
+        color: black;
+        display: flex;
+       margin:0% 40% 0% 25%;
+        justify-content: center;
+        justify-self: center;
+        justify-items: center;
+
+    }
+
+    .contactoImagen{
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+}
+
+

@@ -1,0 +1,147 @@
+body main .fechas {
+  text-align: center;
+  margin: 0rem 7rem 7rem 7rem;
+  background-color: black;
+  border: 4px;
+  padding: 10px;
+  border-radius: 8px;
+  border-color: lightslategray;
+  border-style: groove; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0; }
+
+body {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+  margin-left: 0%; }
+  body .menuPrincipal {
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 10px;
+    display: grid;
+    border-color: #b9770e;
+    background-color: #4a235a;
+    width: 80%;
+    margin-left: 10%; }
+    body .menuPrincipal h1 {
+      justify-content: center;
+      text-align: center;
+      letter-spacing: 0.5rem;
+      font-size: 3rem;
+      color: #b9770e; }
+    body .menuPrincipal nav ul li {
+      list-style: none;
+      font-size: 1.8rem; }
+    body .menuPrincipal nav ul {
+      margin-top: 10px;
+      text-decoration: none;
+      display: flex;
+      justify-content: space-evenly; }
+    body .menuPrincipal nav ul li a {
+      text-decoration: none;
+      color: #b9770e; }
+  body main {
+    width: 80%;
+    margin-left: 10%;
+    background-color: #1b0e20; }
+    body main .fechas #proximas {
+      grid-area: "proximas"; }
+    body main .fechas #pasadas {
+      grid-area: "pasadas"; }
+    body main .fechas h2 {
+      color: #ba9252;
+      margin-bottom: 2rem;
+      font-size: 2rem; }
+    body main .fechas ul {
+      list-style: none;
+      padding: 1px;
+      color: #b9770e; }
+    body main .fechas ul li {
+      padding: 0.4rem;
+      font-size: 1.2rem; }
+    body main .imagenesIndex {
+      margin-top: 3px;
+      margin-left: 8%;
+      margin-right: 8%; }
+    body main .caruselIndex {
+      width: 10%;
+      height: 10%;
+      justify-content: center;
+      margin: 25rem;
+      height: 10%; }
+
+.musica {
+  display: grid;
+  grid-template: row;
+  justify-content: center;
+  justify-items: center;
+  margin: 10px; }
+  .musica .musica1 {
+    display: grid;
+    grid-template: column;
+    justify-content: center;
+    grid-template-areas: "ImagenBach descripcionBach";
+    color: #b9770e; }
+    .musica .musica1 div {
+      text-align: center;
+      justify-items: center;
+      padding: 10%;
+      color: #b9770e; }
+  .musica .musica2 {
+    margin-top: 20px;
+    padding: 4px;
+    display: grid;
+    grid-template: row;
+    text-align: center;
+    justify-content: center; }
+  .musica h2 {
+    color: #b9770e; }
+
+footer {
+  background-color: black;
+  height: 200px; }
+  footer h3 {
+    color: white;
+    text-align: center;
+    font-size: 1.2rem; }
+
+.quienSoy {
+  padding-top: 10px;
+  text-align: center; }
+  .quienSoy h1 {
+    padding: 20px 10px 10px 10px;
+    color: #ba9252;
+    font-size: 50px;
+    text-decoration: underline; }
+  .quienSoy p {
+    color: #b9770e;
+    justify-content: center;
+    padding: 50px;
+    font-size: 25px; }
+
+.contacto {
+  background-color: #1b0e20;
+  height: 600px;
+  margin-left: 10%; }
+  .contacto h2 {
+    color: #b9770e;
+    font-size: 1.5rem;
+    text-align: center;
+    font-style: italic; }
+  .contacto form {
+    background-color: wheat;
+    color: black;
+    display: flex;
+    margin: 0% 40% 0% 25%;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center; }
+  .contacto .contactoImagen {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px; }
