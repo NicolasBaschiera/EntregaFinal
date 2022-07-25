@@ -1,9 +1,9 @@
-body main .fechas {
+@import url("https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@500&family=Montserrat:wght@100&display=swap");
+.fechas {
   text-align: center;
   margin: 0rem 7rem 7rem 7rem;
   background-color: black;
   border: 4px;
-  padding: 10px;
   border-radius: 8px;
   border-color: lightslategray;
   border-style: groove; }
@@ -16,13 +16,12 @@ body main .fechas {
 body {
   background-color: black;
   width: 100%;
-  height: 100%;
-  margin-top: 10px;
-  margin-left: 0%; }
+  height: 100%; }
   body .menuPrincipal {
     border: 2px solid;
     border-radius: 10px;
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     display: grid;
     border-color: #b9770e;
     background-color: #4a235a;
@@ -31,9 +30,11 @@ body {
     body .menuPrincipal h1 {
       justify-content: center;
       text-align: center;
+      font-family: 'Edu VIC WA NT Beginner';
       letter-spacing: 0.5rem;
       font-size: 3rem;
-      color: #b9770e; }
+      color: #b9770e;
+      text-transform: uppercase; }
     body .menuPrincipal nav ul li {
       list-style: none;
       font-size: 1.8rem; }
@@ -41,7 +42,8 @@ body {
       margin-top: 10px;
       text-decoration: none;
       display: flex;
-      justify-content: space-evenly; }
+      justify-content: space-evenly;
+      margin-bottom: 10px; }
     body .menuPrincipal nav ul li a {
       text-decoration: none;
       color: #b9770e; }
@@ -49,38 +51,39 @@ body {
     width: 80%;
     margin-left: 10%;
     background-color: #1b0e20; }
-    body main .fechas #proximas {
-      grid-area: "proximas"; }
-    body main .fechas #pasadas {
-      grid-area: "pasadas"; }
-    body main .fechas h2 {
-      color: #ba9252;
-      margin-bottom: 2rem;
-      font-size: 2rem; }
-    body main .fechas ul {
-      list-style: none;
-      padding: 1px;
-      color: #b9770e; }
-    body main .fechas ul li {
-      padding: 0.4rem;
-      font-size: 1.2rem; }
-    body main .imagenesIndex {
-      margin-top: 3px;
-      margin-left: 8%;
-      margin-right: 8%; }
-    body main .caruselIndex {
-      width: 10%;
-      height: 10%;
-      justify-content: center;
-      margin: 25rem;
-      height: 10%; }
+  body .imagenesIndex {
+    padding-top: 30px;
+    margin-left: 8%;
+    margin-right: 8%; }
+  body .caruselIndex {
+    width: 10%;
+    height: 10%;
+    justify-content: center;
+    margin: 25rem;
+    height: 10%;
+    background-color: wheat; }
+
+.presentacion {
+  padding: 10px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: #b9770e; }
+  .presentacion h2 {
+    padding: 10px;
+    text-decoration: solid; }
+  .presentacion p {
+    margin: 0 15% 0 15%; }
 
 .musica {
   display: grid;
   grid-template: row;
   justify-content: center;
   justify-items: center;
-  margin: 10px; }
+  padding: 10px; }
+  .musica h2 {
+    color: #b9770e;
+    font-family: "Montserrat", sans-serif;
+    font: 1.8rem; }
   .musica .musica1 {
     display: grid;
     grid-template: column;
@@ -99,40 +102,49 @@ body {
     grid-template: row;
     text-align: center;
     justify-content: center; }
-  .musica h2 {
-    color: #b9770e; }
-
-footer {
-  background-color: black;
-  height: 200px; }
-  footer h3 {
-    color: white;
-    text-align: center;
-    font-size: 1.2rem; }
 
 .quienSoy {
   padding-top: 10px;
-  text-align: center; }
-  .quienSoy h1 {
+  text-align: center;
+  font-family: "Montserrat", sans-serif; }
+  .quienSoy h2 {
     padding: 20px 10px 10px 10px;
     color: #ba9252;
-    font-size: 50px;
-    text-decoration: underline; }
+    font-size: 2.5rem;
+    text-decoration: underline;
+    text-transform: uppercase; }
   .quienSoy p {
     color: #b9770e;
     justify-content: center;
     padding: 50px;
     font-size: 25px; }
 
+.fechas {
+  font-family: "Montserrat", sans-serif; }
+  .fechas #proximas {
+    grid-area: "proximas"; }
+  .fechas #pasadas {
+    grid-area: "pasadas"; }
+  .fechas h2 {
+    color: #ba9252;
+    margin-bottom: 2rem;
+    font-size: 2rem; }
+  .fechas ul {
+    list-style: none;
+    padding: 1px;
+    color: #b9770e; }
+  .fechas ul li {
+    padding: 0.4rem;
+    font-size: 1.2rem; }
+
 .contacto {
   background-color: #1b0e20;
-  height: 600px;
-  margin-left: 10%; }
+  padding-bottom: 70px; }
   .contacto h2 {
     color: #b9770e;
     font-size: 1.5rem;
     text-align: center;
-    font-style: italic; }
+    font-family: "Montserrat", sans-serif; }
   .contacto form {
     background-color: wheat;
     color: black;
@@ -145,3 +157,76 @@ footer {
     display: flex;
     justify-content: center;
     margin-top: 40px; }
+
+footer {
+  background-color: black;
+  padding: 20px;
+  margin-top: 20px; }
+  footer h3 {
+    color: grey;
+    text-align: center;
+    font-size: 1.2rem; }
+  footer .logoLinks {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: px; }
+    footer .logoLinks a {
+      color: none;
+      text-decoration: none; }
+
+@media screen and (max-width: 900px) {
+  body .menuPrincipal h1 {
+    font-size: 2.8rem;
+    letter-spacing: 0.3rem; }
+  body .menuPrincipal nav ul li {
+    font-size: 1.4rem; }
+  .musica {
+    margin-left: 10px;
+    margin-right: 10px; }
+    .musica h2 {
+      font-size: 1.3rem; }
+  .quienSoy h2 {
+    font-size: 2rem; }
+  .quienSoy p {
+    padding: 30px;
+    font-size: 20px; } }
+
+@media screen and (max-width: 550px) {
+  body main {
+    width: 100%;
+    margin-left: 0; }
+  body .menuPrincipal {
+    width: 90%;
+    margin-left: 5%; }
+    body .menuPrincipal h1 {
+      font-size: 2.5rem;
+      letter-spacing: 0.2rem; }
+    body .menuPrincipal nav ul li {
+      font-size: 1rem; }
+  .musica h2 {
+    font-size: 1rem;
+    margin: 1rem; }
+  .quienSoy h2 {
+    font-size: 1.8rem; }
+  .quienSoy p {
+    padding: 30px;
+    font-size: 15px; }
+  .fechas {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-left: 0;
+    padding-right: 0; }
+    .fechas h2 {
+      color: #ba9252;
+      margin-bottom: 1rem;
+      font-size: 1.5rem; }
+    .fechas ul {
+      list-style: none;
+      padding: 1px;
+      color: #b9770e; }
+    .fechas ul li {
+      padding: 0.4rem;
+      font-size: 1rem; } }

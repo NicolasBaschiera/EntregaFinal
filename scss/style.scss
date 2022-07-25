@@ -1,7 +1,8 @@
+//imports
 @import "utilities/variables";
 @import "utilities/mixing";
 @import "utilities/extend";
-
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@500&family=Montserrat:wght@100&display=swap');
 
 *{
     margin: 0;
@@ -10,11 +11,15 @@
 }
 
 body{
+    //PROPIEDADES DEL BODI
     @include bodyBasics;
+
+    //LOGO Y BARRA DE NAVEGACION
    .menuPrincipal{
         border: 2px solid ;
         border-radius: 10px;
-        padding: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         display: grid;
         border-color: $color-estandar;
         background-color: $color-fondos;
@@ -23,9 +28,11 @@ body{
         h1{
             justify-content: center;
             text-align: center;
+            font-family: 'Edu VIC WA NT Beginner';
             letter-spacing: 0.5rem;
             font-size: 3rem;
             color: $color-estandar;
+            text-transform: uppercase;
         }
         nav ul li{
             list-style: none;
@@ -36,6 +43,7 @@ body{
             text-decoration: none;
             display: flex;
             justify-content: space-evenly;
+            margin-bottom: 10px;
 
         }
         nav ul li a{
@@ -44,42 +52,14 @@ body{
         }
     }
 
- //   .linkMenu:hover {
- //    background-color: white;
- //    font-size: 2rem;
- //       color: black;
- //   }
-
     main{
         width: 80%;
         margin-left: 10%;
         background-color: $color-fondos2;
-        .fechas{
-            @extend %fechas;
-            #proximas{
-             grid-area:"proximas";
-            }
-            #pasadas{
-                grid-area:"pasadas";
-            }
-            h2{
-                color: $color-titulos;
-                margin-bottom: 2rem;
-                font-size: 2rem;
-            }
-            ul{
-                list-style: none;
-                padding: 1px;
-                color: $color-estandar;
-            }
-
-            ul li{
-                padding: 0.4rem;
-                font-size: $tamano-estandar; 
-            }
     }
+// INDEX    
         .imagenesIndex{
-            margin-top: 3px;
+            padding-top: 30px;
             margin-left: 8%;
             margin-right: 8%;
 
@@ -90,18 +70,38 @@ body{
             justify-content: center;
             margin: 25rem;
             height: 10%;
+            background-color: wheat;
     }
 
 }
-}
 
+
+.presentacion{
+    padding: 10px;
+    text-align: center;
+    font-family: $fuente-texto;
+    color: $color-estandar;
+    h2{
+        padding: 10px;
+        text-decoration: solid;
+    }
+    p{
+        margin: 0 15% 0 15%;
+    }
+}
+// PESTAÑA DE MUSICA
 .musica{
     display: grid;
     grid-template: row;
     justify-content: center;
     justify-items: center;
-    margin: 10px;
+    padding: 10px;
     
+    h2{
+        color: $color-estandar;
+        font-family: $fuente-texto;
+        font: 1.8rem;
+    }
 
     .musica1{
         display: grid;
@@ -128,30 +128,19 @@ body{
 
     }
 
-    h2{
-        color: $color-estandar;
-    }
-}
-
-footer{
-    background-color: black;
-    height: 200px;
-    h3{
-        color: white;
-        text-align: center;
-        font-size: $tamano-estandar;
-    }
 
 }
-
+// PESTAÑA DE BIOGRAFIA
 .quienSoy{
     padding-top:10px;
     text-align: center;
-    h1{
+    font-family: $fuente-texto;
+    h2{
         padding: 20px 10px 10px 10px;
         color: $color-titulos;
-        font-size: 50px;
+        font-size: 2.5rem;
         text-decoration: underline;
+        text-transform: uppercase;
     }
     p{
         color: $color-estandar;
@@ -159,18 +148,46 @@ footer{
         padding: 50px;
         font-size: 25px;
     }
+
 }
 
+//PESTAÑA CONCIERTOS
+.fechas{
+    @extend %fechas;
 
+    font-family: $fuente-texto;
+    #proximas{
+     grid-area:"proximas";
+    }
+    #pasadas{
+        grid-area:"pasadas";
+    }
+    h2{
+        color: $color-titulos;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+    }
+    ul{
+        list-style: none;
+        padding: 1px;
+        color: $color-estandar;
+    }
+
+    ul li{
+        padding: 0.4rem;
+        font-size: $tamano-estandar; 
+    }
+}
+
+// PESTAÑA DE CONTACTO
 .contacto{
     background-color: $color-fondos2;
-    height: 600px;
-    margin-left: 10%;
+    padding-bottom: 70px;
     h2{
         color: $color-estandar;
         font-size: 1.5rem;
         text-align: center;
-        font-style: italic;
+        font-family: $fuente-texto;
     }
     form{
         background-color: wheat;
@@ -190,4 +207,130 @@ footer{
     }
 }
 
+//FOOTER
+footer{
+    background-color: black;
+    padding: 20px;
+    margin-top: 20px;
+    
 
+    h3{
+        color: grey;
+        text-align: center;
+        font-size: $tamano-estandar;
+    }
+    .logoLinks{
+        display: flex;
+        justify-content: center;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: px;
+        a{
+            color: none;
+            text-decoration: none;
+        }
+    }
+}
+
+//MEDIA QUERIES (TABLETS)
+
+@media screen and (max-width: 900px){
+
+     body{
+            .menuPrincipal{
+                h1{
+                    font-size: 2.8rem;
+                    letter-spacing: 0.3rem;
+                }
+                nav ul li {
+                    font-size: 1.4rem;
+                }
+            }
+    }
+
+
+    .musica{
+        margin-left: 10px;
+        margin-right: 10px;
+        h2{
+            font-size: 1.3rem;
+        }
+    }
+
+    .quienSoy{
+        h2{
+            font-size: 2rem
+        }
+        p{
+            padding: 30px;
+            font-size: 20px;
+        }
+    }
+
+
+}
+
+
+//media queries mobile
+
+@media screen and (max-width: 550px){
+    body{
+        main{
+               width: 100%;
+                margin-left: 0;
+        }
+           .menuPrincipal{
+               width: 90%;
+                margin-left: 5%;
+
+               h1{
+                   font-size: 2.5rem;
+                   letter-spacing: 0.2rem;
+               }
+               nav ul li {
+                  font-size: 1rem;
+              }
+           }
+      }
+
+
+    .musica{
+        h2{
+            font-size: 1rem;
+            margin: 1rem;
+       }
+    }
+
+    .quienSoy{
+        h2{
+            font-size: 1.8rem
+        }
+        p{
+           padding: 30px;
+            font-size: 15px;
+       }
+    }   
+
+    .fechas{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        padding-left: 0;
+        padding-right: 0;
+        h2{
+            color: $color-titulos;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        ul{
+            list-style: none;
+            padding: 1px;
+            color: $color-estandar;
+        }
+    
+        ul li{
+            padding: 0.4rem;
+            font-size: 1rem; 
+        }
+    }
+}
